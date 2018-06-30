@@ -13,8 +13,6 @@ int prefixo(char palavra[50], int tam) {
 		tam_prefixo++;
 		i++;
 	}
-
-	printf("tam=%d\n", tam);
 	for (i = 0; i < tam_prefixo; i++) {
 		if (palavra[i] != prefixo[i]) {
 			printf("Nao e o prefixo!\n");
@@ -34,7 +32,6 @@ int sufixo(char palavra[50], int tam_palavra) {
 		tam_sufixo++;
 		i++;
 	}
-	printf("palavra=%d\n", tam_palavra);
 	for (i = tam_sufixo; i > 0; i--) {
 		if (sufixo[i - 1] != palavra[tam_palavra - 1]) {
 			printf("Nao e o sufixo!\n");
@@ -60,9 +57,8 @@ for(tam_sub = 0; sub[tam_sub] != '\0'; ++tam_sub);
 			for (j = 0; j < tam_sub; j++) {
 				if (sub[j] == palavra[aux]) {
 					cont++;
-          printf("cont=%d\n",cont);
           if(cont==1){
-            printf("E uma sub\n");
+            printf("E uma subpalavra\n");
             return 0;
           }
           aux++;
@@ -88,9 +84,7 @@ int main(void) {
 		i++;
 	}
 	tam_palavra--;
-	printf("tam=%d\n", tam_palavra);
-
-	do {
+	
 		printf("Digite a operação que deseja realizar:\n");
 		printf("[1]Deseja comparar o sufixo\n");
 		printf("[2]Deseja comparar o prefixo\n");
@@ -110,6 +104,6 @@ int main(void) {
 		default:
 			printf("Escolha invalida\n");
 		}
-	} while (escolha != '\n');
+
 	return 0;
 }
