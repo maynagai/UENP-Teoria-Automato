@@ -49,7 +49,6 @@ int subpalavra(char palavra[50], int tam_palavra) {
 	scanf("%s", &sub);
 
 for(tam_sub = 0; sub[tam_sub] != '\0'; ++tam_sub);
- 	printf("palavra=%d\n", tam_sub);
 
 	for (i = 0; i < tam_palavra; i++) {
 		if (palavra[i] == sub[0]) {
